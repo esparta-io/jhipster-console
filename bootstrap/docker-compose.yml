@@ -4,8 +4,8 @@ services:
     jhipster-elasticsearch:
         image: jhipster/jhipster-elasticsearch:latest
         ports:
-            - 9200:9200
-            - 9300:9300
+            - 127.0.0.1:9200:9200
+            - 127.0.0.1:9300:9300
         # Uncomment this as well as the volume section down below
         # to have elasticsearch data persisted to a volume
         # you will need to create a named volume with `docker volume create log-data`
@@ -33,7 +33,7 @@ services:
     jhipster-console:
         image: jhipster/jhipster-console:latest
         ports:
-            - 5601:5601
+            - 127.0.0.1:5601:5601
         #environment:
         #    - ELASTICSEARCH_URL=http://jhipster-elasticsearch:9200
 
