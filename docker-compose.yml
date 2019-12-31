@@ -4,7 +4,7 @@ services:
     jhipster-elasticsearch:
         build: jhipster-elasticsearch/
         ports:
-            - "9200:9200"
+            - "127.0.0.1:9200:9200"
         # Uncomment this section to have elasticsearch data loaded from a volume
         #volumes:
         #   - ./log-data:/usr/share/elasticsearch/data
@@ -29,7 +29,7 @@ services:
         environment:
             - ELASTICSEARCH_URL=http://jhipster-elasticsearch:9200
         ports:
-            - "5601:5601"
+            - "127.0.0.1:5601:5601"
         depends_on:
             - jhipster-elasticsearch
 
